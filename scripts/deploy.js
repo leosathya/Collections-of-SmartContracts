@@ -7,8 +7,13 @@ const main = async () => {
 	const erc20token = await ERC20Token.deploy();
 	await erc20token.deployed();
 
+	const CrowdFunding = await hre.ethers.getContractFactory("CrowdFunding");
+	const crowdfunding = await CrowdFunding.deploy();
+	await crowdfunding.deployed();
+
 	console.log("Ether_Wallet Deployed to :: ", ether_wallet.address);
 	console.log("ERC20Token Deployed to :: ", erc20token.address);
+	console.log("CrowdFunding Deployed to :: ", crowdfunding.address);
 };
 
 const runMain = async () => {
