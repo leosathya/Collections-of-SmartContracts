@@ -11,9 +11,14 @@ const main = async () => {
 	const crowdfunding = await CrowdFunding.deploy();
 	await crowdfunding.deployed();
 
+	const MultiSigWallet = await hre.ethers.getContractFactory("MultiSigWallet");
+	const multisigwallet = await MultiSigWallet.deploy();
+	await multisigwallet.deployed();
+
 	console.log("Ether_Wallet Deployed to :: ", ether_wallet.address);
 	console.log("ERC20Token Deployed to :: ", erc20token.address);
 	console.log("CrowdFunding Deployed to :: ", crowdfunding.address);
+	console.log("MultiSigWallet Deployed to :: ", multisigwallet.address);
 };
 
 const runMain = async () => {
