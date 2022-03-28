@@ -15,10 +15,21 @@ const main = async () => {
 	const multisigwallet = await MultiSigWallet.deploy();
 	await multisigwallet.deployed();
 
+	const UniDirectionalPaymentGateway = await hre.ethers.getContractFactory(
+		"UniDirectionalPaymentGateway"
+	);
+	const unidirectionalpaymentgateway =
+		await UniDirectionalPaymentGateway.deploy();
+	await unidirectionalpaymentgateway.deployed();
+
 	console.log("Ether_Wallet Deployed to :: ", ether_wallet.address);
 	console.log("ERC20Token Deployed to :: ", erc20token.address);
 	console.log("CrowdFunding Deployed to :: ", crowdfunding.address);
 	console.log("MultiSigWallet Deployed to :: ", multisigwallet.address);
+	console.log(
+		"UniDirectionalPaymentGateway Deployed to :: ",
+		unidirectionalpaymentgateway.address
+	);
 };
 
 const runMain = async () => {
