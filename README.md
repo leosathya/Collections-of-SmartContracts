@@ -12,6 +12,10 @@ Deployment Tools : Hardhat, Rinkeby Testnet, Alchemy API, Metamask, Tested on Re
 
 ## Contracts
 
+### 7. ERC721
+
+ERC721 Token
+
 ### 6. Uni-Directional Payment Channel
 
 Mainly use to get rid of Multiple transaction mining fees :

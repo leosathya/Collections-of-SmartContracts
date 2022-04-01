@@ -22,6 +22,10 @@ const main = async () => {
 		await UniDirectionalPaymentGateway.deploy();
 	await unidirectionalpaymentgateway.deployed();
 
+	const ERC721 = await hre.ethers.getContractFactory("ERC721");
+	const erc721 = await ERC721.deploy();
+	await erc721.deployed();
+
 	console.log("Ether_Wallet Deployed to :: ", ether_wallet.address);
 	console.log("ERC20Token Deployed to :: ", erc20token.address);
 	console.log("CrowdFunding Deployed to :: ", crowdfunding.address);
@@ -30,6 +34,7 @@ const main = async () => {
 		"UniDirectionalPaymentGateway Deployed to :: ",
 		unidirectionalpaymentgateway.address
 	);
+	console.log("ERC721 Deployed to :: ", erc721.address);
 };
 
 const runMain = async () => {
