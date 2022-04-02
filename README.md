@@ -12,6 +12,10 @@ Deployment Tools : Hardhat, Rinkeby Testnet, Alchemy API, Metamask, Tested on Re
 
 ## Contracts
 
+### 9. Dutch Auction
+
+### 8. English Auction
+
 ### 7. ERC721
 
 ERC721 Token
